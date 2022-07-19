@@ -6,7 +6,7 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const routes = require('./routes/api')
+const routes = require("./routes/api");
 
 // Atlas - Database Access - MongoDB Users password - QGx6rTpqiM11prDj
 // const MONGODB_URI =
@@ -20,7 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wivibot", {
 mongoose.connection.on("connected", () => {
   console.log("Mongoose is connected!");
 });
-
 
 // Saving data to mongoDB database
 // const data = {
@@ -42,10 +41,20 @@ mongoose.connection.on("connected", () => {
 //   }
 // });
 
+// Data Parsing - Makes all the requests coming in as JSON or
+// urlencoded and maked the data available in req.body (for Posts)
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Morgan - HTTP request logger
 //          Any http request we make
 //          will be logged in terminal
 app.use(morgan("tiny"));
 
-app.use('/api', routes);
+app.use("/api", routes);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("webapp-client/build"));
+}
+
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
