@@ -29,8 +29,8 @@ export function ContentPage() {
       {loading ? (
         <h1>Loading ... </h1>
       ) : (
-        data.map((post) => (
-          <div className="p-5">
+        data.map((post, id) => (
+          <div className="p-5" key={id}>
             <p>Lattitude of the location: {post.latitude}</p>
             <p>Longitude of the location: {post.longitude}</p>
             <p>Signal Strength at this location: {post.signalStrength}</p>

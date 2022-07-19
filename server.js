@@ -8,9 +8,7 @@ const PORT = process.env.PORT || 8080;
 
 const routes = require("./routes/api");
 
-// Atlas - Database Access - MongoDB Users password - QGx6rTpqiM11prDj
-// const MONGODB_URI =
-//   "mongodb+srv://kjaskaran:QGx6rTpqiM11prDj@clusterjk.z1qwasf.mongodb.net/?retryWrites=true&w=majority";
+//mongodb+srv://kjaskaran:QGx6rTpqiM11prDj@clusterjk.z1qwasf.mongodb.net/?retryWrites=true&w=majority
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wivibot", {
   useNewUrlParser: true,
