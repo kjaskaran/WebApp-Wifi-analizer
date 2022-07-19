@@ -4,7 +4,11 @@
   "description": "A MERN application for a Wifi-analyzer-Robot.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "nodemon": "nodemon server.js",
+    "client": "cd web-app && npm start",
+    "dev": "concurrently -n server,client -c red,green \"npm run nodemon\" \"npm run client\""
   },
   "author": "Jaskaran Kaur",
   "license": "ISC",
