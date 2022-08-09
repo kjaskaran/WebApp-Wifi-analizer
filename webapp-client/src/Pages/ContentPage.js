@@ -31,8 +31,9 @@ export function ContentPage() {
       ) : (
         data.map((post, id) => (
           <div className="p-5" key={id}>
-            <p>{post.Data0}</p>
-            <img src={`data:image/png;base64,${post.img0}`} alt="Wifi data" />
+            <p>{post.date}</p>
+            <img src={`data:image/png;base64,${post.SlamPicture}`} alt="Slam Picture" />
+            <img src={`data:image/png;base64,${post.PersonPicture}`} alt="Person Picture" />
           </div>
         ))
       )}
