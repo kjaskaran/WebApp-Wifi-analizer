@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 // import image from "../images/R.jpg";
 import "../styles/contentpage.css";
-import moment from "momentjs";
 
 export function ContentPage() {
   const [data, setData] = useState([]);
@@ -32,15 +31,15 @@ export function ContentPage() {
       ) : (
         data.map((post, id) => (
           <div className="p-5" key={id}>
-            <p>{moment(post.date.format('YYYY-MM-DD'))}</p>
+            <p>{new Date(post.date * 1000).toDateString}</p>
             <img
-              src={`data:image/png;base64,${post.SlamPicture}`}
+              src={`data:image/png;base64,${post.img0}`}
               alt="Slam Picture"
             />
-            <img
+            {/* <img
               src={`data:image/png;base64,${post.PersonPicture}`}
               alt="Person Picture"
-            />
+            /> */}
           </div>
         ))
       )}
