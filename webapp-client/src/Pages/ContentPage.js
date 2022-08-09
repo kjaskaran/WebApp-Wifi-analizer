@@ -31,9 +31,8 @@ export function ContentPage() {
       ) : (
         data.map((post, id) => (
           <div className="p-5" key={id}>
-            <p>Lattitude of the location: {post.latitude}</p>
-            <p>Longitude of the location: {post.longitude}</p>
-            <p>Signal Strength at this location: {post.signalStrength}</p>
+            <p>{post.Data0}</p>
+            <img src={`data:image/png;base64,${post.img0}`} alt="Wifi data" />
           </div>
         ))
       )}
