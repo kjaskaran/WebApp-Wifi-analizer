@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 // import image from "../images/R.jpg";
 import "../styles/contentpage.css";
-import moment from 'moment';
+import moment from "momentjs";
 
 export function ContentPage() {
   const [data, setData] = useState([]);
