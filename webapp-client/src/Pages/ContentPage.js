@@ -31,7 +31,7 @@ export function ContentPage() {
       ) : (
         data.map((post, id) => (
           <div className="p-5" key={id}>
-            <p>{new Date(post.DateTime)}</p>
+            <p>{new Date(post.date)}</p>
             <img
               src={`data:image/png;base64,${post.SlamPicture}`}
               alt="Slam Picture"
