@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, browserHistory } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage";
 import { AboutPage } from "./Pages/AboutPage";
 import { ContactsPage } from "./Pages/ContactsPage";
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes>
+      <Routes history={browserHistory}>
         <Route path="/home" element={<HomePage />}>
           Home
         </Route>

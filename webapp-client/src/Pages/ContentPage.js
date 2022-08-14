@@ -29,11 +29,7 @@ export function ContentPage() {
   }, []);
 
   if (loading) {
-    return (
-      <>
-        <LoadingSpinner />
-      </>
-    );
+    return <LoadingSpinner />;
   } else {
     return data.map(
       (post, id) =>
