@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Route, Routes, browserHistory } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage";
 import { AboutPage } from "./Pages/AboutPage";
 import { ContactsPage } from "./Pages/ContactsPage";
@@ -11,17 +11,17 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes history={browserHistory}>
-        <Route path="/home" element={<HomePage />}>
+      <Routes>
+        <Route path="home" element={<HomePage />}>
           Home
         </Route>
-        <Route path="/about" element={<AboutPage />}>
+        <Route path="about" element={<AboutPage />}>
           About
         </Route>
-        <Route path="/content" element={<ContentPage />}>
+        <Route path="content" element={<ContentPage />}>
           Events
         </Route>
-        <Route path="/contact" element={<ContactsPage />}>
+        <Route path="contact" element={<ContactsPage />}>
           Contact
         </Route>
       </Routes>
