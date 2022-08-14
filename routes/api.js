@@ -8,7 +8,7 @@ const WiviBot = require('../models/WibiBotData')
 router.get("/data", (req, res) => {
     WiviBot.find({})
       .then((data) => {
-        console.log("Data: ", data);
+        // console.log("Data: ", data);
         res.json(data);
       })
       .catch((err) => {
