@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../images/wp2141407.webp";
+import image from "../images/Robot.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
