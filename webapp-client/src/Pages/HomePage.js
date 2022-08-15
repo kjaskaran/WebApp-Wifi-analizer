@@ -19,7 +19,7 @@ function Main(props) {
         <br />
         Have fun exploring <FontAwesomeIcon icon="smile" />
       </p>
-      <img className="img-fluid" src={image} alt="Wifi Analizer and self-navigation implemented on Sunfounder Robot" height={340} width={340}/>
+      <img className="img-fluid" src={image} alt="Wifi Analizer and self-navigation implemented on Sunfounder Robot" height={700} width={700}/>
     </section>
   );
 }

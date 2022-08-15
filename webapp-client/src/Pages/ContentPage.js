@@ -6,7 +6,7 @@ import LoadingSpinner from "../Loading_Spinner/Spinner.js";
 
 function showHideComponent(date) {
   console.log(new Date().getTime());
-  return true ? new Date().getTime() - date < 2 * 1000 : false;
+  return true ? new Date().getTime() - date < 10 * 1000 : false;
 }
 
 export function ContentPage() {
