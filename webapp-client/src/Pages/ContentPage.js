@@ -34,7 +34,7 @@ export function ContentPage() {
   } else {
     return data.map(
       (post, id) =>
-        showHideComponent(post.date) && (
+        showHideComponent(post.TimeStamp * 1000) && (
           <div className="container pt-2" key={id}>
             <div className="row m-2">
               <p className="lead d-inline-flex ms-5">
