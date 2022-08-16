@@ -36,7 +36,7 @@ export function ContentPage() {
       (post, id) =>
         showHideComponent(post.TimeStamp * 1000) && (
           <div className="container pt-2" key={id}>
-            <div className="row m-2">
+            <div className="row m-1">
               <p className="lead d-inline-flex ms-5">
                 <strong>Captured at: </strong>
                 <em>
@@ -57,8 +57,8 @@ export function ContentPage() {
                   className="img-thumbnail"
                   src={`data:image/jpeg;base64,${post.ImgWifi}`}
                   alt="Slam Picture"
-                  height={700}
-                  width={700}
+                  height={650}
+                  width={650}
                 />
               </div>
             </div>
@@ -77,8 +77,8 @@ export function ContentPage() {
                   className="img-thumbnail"
                   src={`data:image/jpeg;base64,${post.ImgSlam}`}
                   alt="Slam Picture"
-                  height={470}
-                  width={470}
+                  height={350}
+                  width={350}
                 />
               </div>
             </div>
